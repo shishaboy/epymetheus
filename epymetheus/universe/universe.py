@@ -36,14 +36,7 @@ class Universe:
         self.__init_hash()
 
     def __check_prices(self):
-        if np.isnan(self.prices).any(None):
-            raise ValueError("Price has NA.")
-        if np.isinf(self.prices).any(None):
-            raise ValueError("Price has INF.")
-        if not self.bars.is_unique:
-            raise ValueError("Bars are not unique.")
-        if not self.assets.is_unique:
-            raise ValueError("Assets are not unique.")
+        pass
 
     def __init_hash(self):
         """
